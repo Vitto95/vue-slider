@@ -33,7 +33,12 @@
           <img :src="photos[counterPhotos]" alt="" />
           <!-- pallini scorrimento -->
           <div class="container-circle">
-            <i class="fas fa-circle vg-circle"></i>
+            <i
+              v-for="(photo,index) in photos"
+              class="fas fa-circle vg-circle"
+              :class="(index === counterPhotos)? 'active' : null "
+              @click="counterPhotos = index"
+            ></i>
           </div>
         </div>
         <!-- freccia destra -->

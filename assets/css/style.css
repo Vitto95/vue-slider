@@ -13,7 +13,7 @@ body {
 }
 
 .active {
-  display: block;
+  color: blue;
 }
 
 /* /global */
@@ -79,6 +79,7 @@ main .container-slider .container-images .container-circle {
 }
 
 main .container-slider .container-images .container-circle .vg-circle {
+  margin-right: 3px;
   cursor: pointer;
 }
 /* /main */
