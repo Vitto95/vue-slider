@@ -9,7 +9,9 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: lightblue;
+  color: white;
+  background-color: black;
+  font-family: "Open Sans", sans-serif;
 }
 
 .active {
@@ -22,7 +24,7 @@ body {
 
 header {
   height: 100px;
-  background-color: lightcoral;
+  /* background-color: lightcoral; */
 }
 
 header h1 {
@@ -40,14 +42,14 @@ main {
   align-items: center;
   width: 100%;
   height: calc(100% - 100px);
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
 }
 
 main .container-slider {
   display: flex;
   width: 80%;
-  height: 70%;
-  background-color: lightsalmon;
+  height: 75%;
+  /* background-color: lightsalmon; */
 }
 main .container-slider .container-angle {
   display: flex;
@@ -66,6 +68,7 @@ main .container-slider .container-images {
 main .container-slider .container-images img {
   width: 100%;
   height: 100%;
+  border-radius: 10px;
 }
 
 main .container-slider .container-images .container-circle {
