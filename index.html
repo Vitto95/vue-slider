@@ -23,21 +23,21 @@
     </header>
     <main>
       <!-- container per slider -->
-      <div class="container-slider">
+      <div id="app" class="container-slider">
         <!-- freccia sinistra -->
-        <div class="container-angle">
+        <div class="container-angle" @click="prevPhoto()">
           <i class="fas fa-angle-left fa-5x"></i>
         </div>
         <!-- container immagini -->
         <div class="container-images">
-          <img src="assets/img/TowardtheHorizon.jpg" alt="" />
+          <img :src="photos[counterPhotos]" alt="" />
           <!-- pallini scorrimento -->
           <div class="container-circle">
             <i class="fas fa-circle vg-circle"></i>
           </div>
         </div>
         <!-- freccia destra -->
-        <div class="container-angle">
+        <div class="container-angle" @click="nextPhoto()">
           <i class="fas fa-angle-right fa-5x"></i>
         </div>
       </div>
