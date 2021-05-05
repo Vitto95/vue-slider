@@ -1,7 +1,16 @@
+/* app per header */
+
+const root = new Vue({
+  el: "#root",
+  data: {
+    title: "Galleria immagini",
+  },
+});
+
+/* app per slider */
 const app = new Vue({
   el: "#app",
   data: {
-    title: "Galleria immagini",
     photos: [
       "assets/img/books.jpg",
       "assets/img/bridge-sun.jpg",
@@ -9,6 +18,7 @@ const app = new Vue({
       "assets/img/hiking.jpg",
     ],
     counterPhotos: 0,
+    timer: 0,
   },
   methods: {
     prevPhoto() {
@@ -23,6 +33,11 @@ const app = new Vue({
         this.counterPhotos = 0;
       }
       return counterPhotos;
+    },
+    playerPhoto() {
+      this.timer = setInterval(function () {
+        app.nextPhoto();
+      }, 2000);
     },
   },
 });

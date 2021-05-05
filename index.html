@@ -24,7 +24,7 @@
     <title>Slider</title>
   </head>
   <body>
-    <header>
+    <header id="root">
       <h1>{{title}}</h1>
     </header>
     <main>
@@ -41,9 +41,17 @@
           <div class="container-circle">
             <i
               v-for="(photo,index) in photos"
-              class="fas fa-circle vg-circle"
+              class="fas fa-circle vg-circle fa-1x"
               :class="(index === counterPhotos)? 'active' : null "
               @click="counterPhotos = index"
+            ></i>
+          </div>
+          <!-- player -->
+          <div class="container-player">
+            <i
+              class="far fa-play-circle fa-2x vg-player"
+              @click="playerPhoto()"
+              :disabled="timer !== 0"
             ></i>
           </div>
         </div>

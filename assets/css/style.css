@@ -15,7 +15,7 @@ body {
 }
 
 .active {
-  color: blue;
+  color: lightblue;
 }
 
 /* /global */
@@ -23,14 +23,34 @@ body {
 /* header */
 
 header {
+  width: 100%;
   height: 100px;
   /* background-color: lightcoral; */
 }
 
 header h1 {
+  position: relative;
   text-align: center;
   line-height: 100px;
 }
+
+header h1:hover {
+  color: lightblue;
+  transform: scale(1.5);
+  transition: all 0.5s ease;
+}
+
+/* header h1:after {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(-50%);
+  content: "";
+  border-bottom: 1px solid white;
+  width: 70%;
+  height: 1px;
+  margin: auto;
+} */
 
 /* /header */
 
@@ -48,7 +68,7 @@ main {
 main .container-slider {
   display: flex;
   width: 80%;
-  height: 75%;
+  height: 80%;
   /* background-color: lightsalmon; */
 }
 main .container-slider .container-angle {
@@ -59,12 +79,22 @@ main .container-slider .container-angle {
   height: 100%;
   cursor: pointer;
 }
-
+main .container-slider .container-angle:hover {
+  color: lightblue;
+  transition: all 0.2s ease;
+  transform: scale(1.1);
+}
 main .container-slider .container-images {
   width: 80%;
   height: 100%;
   position: relative;
 }
+
+main .container-slider .container-images:hover {
+  transition: all 0.2s ease-in-out;
+  transform: scale(1.05);
+}
+
 main .container-slider .container-images img {
   width: 100%;
   height: 100%;
@@ -73,16 +103,28 @@ main .container-slider .container-images img {
 
 main .container-slider .container-images .container-circle {
   position: absolute;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   padding: 5px 10px;
   border-radius: 999px;
-  background-color: lightsalmon;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 main .container-slider .container-images .container-circle .vg-circle {
   margin-right: 3px;
   cursor: pointer;
+}
+
+main .container-slider .container-images .container-player {
+  position: absolute;
+  bottom: 10px;
+  padding: 5px 10px;
+  margin-left: 10px;
+}
+
+main .container-slider .container-images .container-player .vg-player {
+  cursor: pointer;
+  font-size: 1.5em;
 }
 /* /main */
